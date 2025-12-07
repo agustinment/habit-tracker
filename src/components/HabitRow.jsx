@@ -12,6 +12,7 @@ const HabitRows = props => {
                     <td
                         key={dayKey}
                         className={props.habit.weekState[dayKey]? 'check' : ''}
+                        onClick={() => props.onToggleDay(props.habitIdx, dayKey)}
                     >
                     </td>
                 ))}

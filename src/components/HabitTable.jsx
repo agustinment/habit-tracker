@@ -18,7 +18,7 @@ const HabitTable = props => {
                 </tr>
             </thead>
             <tbody>
-                {props.habits.map((habit, index) => <HabitRow habit={habit} habitIdx={index}/>)}
+                {props.habits.map((habit, index) => <HabitRow habit={habit} habitIdx={index} onToggleDay={props.onToggleDay}/>)}
             </tbody>
         </table>
     )

@@ -44,8 +44,22 @@ const HabitTracker = () => {
 
     ]);
 
+    function handleToggleDay(habitIdx, day){
+        setHabits(prevHabits => {
+            let arrayCopy = [...prevHabits];
+            let habitCopy = { ...arrayCopy[habitIdx] };
+            let weekCopy = { ...habitCopy.weekState };
+
+            weekCopy[day] = !weekCopy[day]
+            habitCopy.weekState = weekCopy;
+            arrayCopy[habitIdx] = habitCopy;
+            
+            return arrayCopy;
+        })
+    }
+
     return (
-        <HabitTable habits={habits} />
+        <HabitTable habits={habits} onToggleDay={handleToggleDay} />
     )
 
 };
