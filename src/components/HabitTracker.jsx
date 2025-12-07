@@ -1,6 +1,7 @@
 // STATEFUL COMPONENT
 import React, { useState } from 'react';
-import '../styles/HabitTracker'
+import '../styles/habit-tracker.css'
+import HabitTable from './HabitTable'
 
 const HabitTracker = () => {
     const [habits, setHabits] = useState([
@@ -44,8 +45,7 @@ const HabitTracker = () => {
     ]);
 
     return (
-        <>
-        </>
+        <HabitTable habits={habits} />
     )
 
 };
