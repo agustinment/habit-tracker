@@ -7,14 +7,14 @@ const HabitTable = props => {
         <table>
             <thead>
                 <tr>
-                    <th scope="col">HABIT</th>
-                    <th scope="col">Mo</th>
-                    <th scope="col">Tu</th>
-                    <th scope="col">We</th>
-                    <th scope="col">Th</th>
-                    <th scope="col">Fr</th>
-                    <th scope="col">Sa</th>
-                    <th scope="col">Su</th>
+                    <th scope="col" className='col'>HABIT</th>
+                    <th scope="col" className='col'>Mo</th>
+                    <th scope="col" className='col'>Tu</th>
+                    <th scope="col" className='col'>We</th>
+                    <th scope="col" className='col'>Th</th>
+                    <th scope="col" className='col'>Fr</th>
+                    <th scope="col" className='col'>Sa</th>
+                    <th scope="col" className='col'>Su</th>
                 </tr>
             </thead>
             <tbody>
