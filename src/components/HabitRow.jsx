@@ -4,6 +4,10 @@ import '../styles/habit-tracker.css'
 const DAYS = ['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'];
 
 const HabitRows = props => {
+    const values = Object.values(props.habit.weekState);
+    const length = values.filter(v => v).length;
+    const total = values.length;
+
     return (
         <>
             <tr>
@@ -16,6 +20,7 @@ const HabitRows = props => {
                     >
                     </td>
                 ))}
+                <td className='counter'>{length} / {total}</td>
             </tr>
         </>
     )

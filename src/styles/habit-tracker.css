@@ -22,3 +22,7 @@ tr:hover {
 .check {
     background-color: green;
 }
+
+.counter {
+    width: 3rem;
+}
