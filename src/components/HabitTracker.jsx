@@ -1,5 +1,5 @@
 // STATEFUL COMPONENT
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/habit-tracker.css'
 import HabitTable from './HabitTable'
 
@@ -43,6 +43,24 @@ const HabitTracker = () => {
         }
 
     ]);
+
+    // LOCAL STORAGE
+    useEffect(() => {
+        const habitTrackerData = localStorage.getItem('habits-data');
+        if (habitTrackerData) {
+            try {
+                setHabits(JSON.parse(habitTrackerData))
+            }
+            catch {
+                setHabits([])
+            }
+        }
+    }, []);
+
+    useEffect(() => {
+        localStorage.setItem('habits-data', JSON.stringify(habits))
+    }, [habits])
+
 
     function handleToggleDay(habitIdx, day){
         setHabits(prevHabits => {
