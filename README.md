@@ -19,4 +19,4 @@ Un tracker de hábitos simple, con racha de 5 días y estilos simples.
 - REACT
 
 ## Demostración
-Demo en vivo: 
+Demo en vivo: https://agustinment.github.io/habit-tracker/
